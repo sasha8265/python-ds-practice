@@ -22,6 +22,7 @@ def weekday_name(day_of_week):
         'Saturday'
     ]
 
+
     if day_of_week > 7 or day_of_week < 1:
         return None
 

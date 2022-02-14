@@ -11,6 +11,7 @@ def number_compare(a, b):
         'First is greater'
     """
 
+
     if a > b:
         return 'First is greater'
     elif b > a:
