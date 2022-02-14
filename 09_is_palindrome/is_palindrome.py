@@ -21,3 +21,12 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+    # reverse the string and see if it is equal to the original string
+
+    new_string = phrase[::-1]
+
+    if new_string == phrase:
+        return True
+    else:
+        return False
