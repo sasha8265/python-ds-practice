@@ -11,3 +11,16 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    # Count the number of times each number appears and add to a counter dictionary
+    counter = {}
+
+    for num in nums:
+        counter[num] = counter.get(num, 0) + 1
+
+    # find the largest value / highest frequency in the dictionary
+    highest = max(counter.values())
+
+    # return the key with the highest value
+    for (num, count) in counter.items():
+        if count == highest:
+            return num
