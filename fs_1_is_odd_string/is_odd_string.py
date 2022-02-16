@@ -29,3 +29,20 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    # Use ASCII number for each character (a = 97) and use it to subtract from the ASCII number of each char to get a single number (character ASCII - (97 - 1))
+    
+    # would also work if we don't do the extra math and just use the ASCII numbers as they are
+
+    base_val = ord("a") - 1
+
+    total = sum((ord(char) - base_val) for char in word.lower())
+    # print(total)
+
+    if total % 2 == 0:
+        return False
+    
+    return True
+
+
+
