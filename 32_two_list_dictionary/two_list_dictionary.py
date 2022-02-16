@@ -15,3 +15,24 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+
+    # if len(keys) == len(values):
+    #     for value in values:
+    #         for key in keys:
+    #             return {key:value}
+
+    new_dict = {}
+
+    # enumerate will give 2 loop variables:
+    # 1st is the count of the iteration (defaults to start at 0 if not defined)
+    # 2nd is the value of the iteration
+    # will stop once the end of the length of keys is reached
+
+    for idx, key in enumerate(keys):
+        if idx < len(values):
+            new_dict[key] = values[idx]
+        # return None for the value if there are fewer values than keys
+        else:
+            new_dict[key] = None
+
+    return new_dict
